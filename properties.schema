@@ -1,0 +1,114 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "required": false,
+    "globals": {},
+    "properties": {
+        "pluginLocations": {
+            "type": "object",
+            "required": true,
+            "properties": {
+                "course": {
+                    "type": "object",
+                    "properties": {
+                        "_GSAPHorizontalScroll": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "GSAP Horizontal Scroll",
+                            "properties": {
+                                "_isEnabled": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": true,
+                                    "title": "Enable",
+                                    "inputType": "Checkbox",
+                                    "validators": [],
+                                    "help": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "article": {
+                    "type": "object",
+                    "properties": {
+                        "_GSAPHorizontalScroll": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "GSAP Horizontal Scroll",
+                            "properties": {
+                                "_isEnabled": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": false,
+                                    "title": "Enable",
+                                    "inputType": "Checkbox",
+                                    "validators": [],
+                                    "help": ""
+                                },
+                                "selector": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": ".article__inner",
+                                    "title": "Selector",
+                                    "inputType": "Text",
+                                    "validators": [],
+                                    "help": ""
+                                },
+                                "horizontalScroll": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": ".block",
+                                    "title": "Selector",
+                                    "inputType": "Text",
+                                    "validators": [],
+                                    "help": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "block": {
+                    "type": "object",
+                    "properties": {
+                        "_GSAPHorizontalScroll": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "GSAP Horizontal Scroll",
+                            "properties": {
+                                "_isEnabled": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": false,
+                                    "title": "Enable",
+                                    "inputType": "Checkbox",
+                                    "validators": [],
+                                    "help": ""
+                                },
+                                "selector": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": ".block__inner",
+                                    "title": "Selector",
+                                    "inputType": "Text",
+                                    "validators": [],
+                                    "help": ""
+                                },
+                                "horizontalScroll": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": ".component__widget",
+                                    "title": "Selector",
+                                    "inputType": "Text",
+                                    "validators": [],
+                                    "help": ""
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

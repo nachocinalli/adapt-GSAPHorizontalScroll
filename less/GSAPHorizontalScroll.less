@@ -1,0 +1,30 @@
+.has-gsaphorizontalscroll {
+  overflow: hidden;
+}
+.has-gsaphorizontalscroll {
+  .cards__widget {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .cards__item {
+    min-width: 100%;
+  }
+  .cards__item__image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 50%;
+    min-width: auto;
+    margin: auto;
+  }
+  @media (min-width: @device-width-large) {
+    .cards__widget {
+      margin-left: calc(50% - 25vw);    
+    }
+    .cards__item {
+      min-width: 33.3333%;
+    }
+  }
+}

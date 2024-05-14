@@ -1,0 +1,13 @@
+
+// course.json
+  "_GSAPHorizontalScroll": {
+    "_isEnabled": true
+  }
+
+
+// blocks.json
+"_GSAPHorizontalScroll": {
+  "_isEnabled": true,
+  "selector": ".block__inner",
+  "horizontalScroll": ".component__widget"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "adapt-GSAPHorizontalScroll",
+  "version": "1.0.0",
+  "framework": ">=5.0.0",
+  "homepage": "https://github.com/nachocinalli/adapt-GSAPHorizontalScroll",
+  "issues": "https://github.com/nachocinalli/adapt-GSAPHorizontalScroll/issues",
+  "extension": "GSAPHorizontalScroll",
+  "displayName": "GSAP Horizontal Scroll",
+  "description": "Add horizontal scroll using GSAP",
+  "main": "/js/adapt-GSAPHorizontalScroll.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_GSAPHorizontalScroll"
+}
