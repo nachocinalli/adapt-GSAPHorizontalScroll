@@ -40,14 +40,17 @@ class GSAPHorizontalScroll extends Backbone.Controller {
 
     if ($selector.length) {
       $selector.addClass('has-gsaphorizontalscroll');
-      const resizeObserver = new ResizeObserver(() => {
+      const debouncedRefresh = _.debounce(() => {
         Adapt.GSAP.ScrollTrigger.refresh();
+      }, 500);
+      const resizeObserver = new ResizeObserver(() => {
+        debouncedRefresh();
       });
       this.listenToOnce(model, 'change:_isReady', () => {
         if (model.get('_isReady')) {
           this.setupHorizontalScroll($selector, $horizontalScroll);
 
-          resizeObserver.observe($horizontalScroll[0]);
+          resizeObserver.observe($('.page')[0]);
         }
       });
       this.listenTo(view, 'remove', () => {
@@ -61,13 +64,10 @@ class GSAPHorizontalScroll extends Backbone.Controller {
     const viewEl = $view[0];
     const el = $el[0];
 
-    let scrollAmount = null;
-
     const getScrollAmount = () => {
-      if (scrollAmount !== null) return scrollAmount;
       const viewWidth = el.scrollWidth;
-      scrollAmount = -(viewWidth - window.innerWidth + window.innerWidth / 2);
-      return scrollAmount;
+
+      return -(viewWidth - window.innerWidth + window.innerWidth / 2);
     };
     const tween = Adapt.GSAP.lib.to(el, {
       x: getScrollAmount,
